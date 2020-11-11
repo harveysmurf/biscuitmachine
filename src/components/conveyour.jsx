@@ -38,11 +38,11 @@ const MachineBlock = (_, index) => {
   if (Component) {
     return <Component key={index} />;
   }
-  return <td key={index} className="step"></td>;
+  return <td key={index}></td>;
 };
 
 const BiscuitHolder = ({ biscuit }) => {
-  return <td className="step">{biscuit && <Biscuit {...biscuit} />}</td>;
+  return <td>{biscuit && <Biscuit {...biscuit} />}</td>;
 };
 
 const Belt = () => {
