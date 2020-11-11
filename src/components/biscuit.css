@@ -1,0 +1,18 @@
+.biscuit {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.biscuit.yellow {
+  background-color: yellow;
+}
+.biscuit.orange {
+  background-color: orange;
+}
+.biscuit.black {
+  background-color: black;
+}
+.biscuit.pressed {
+  height: 15px;
+}

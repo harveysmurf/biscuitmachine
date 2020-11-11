@@ -1,0 +1,55 @@
+.injector {
+  margin: 0 auto;
+  width: 50px;
+  height: 140px;
+  background: #fff;
+  position: relative;
+}
+.injector.active {
+  background-color: red;
+  animation: press 0.1s linear infinite;
+  animation-iteration-count: 1;
+}
+div.injector > .tip {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: aliceblue;
+}
+div.injector > .drop {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 30px;
+  background-color: yellow;
+  bottom: -50px;
+  border-radius: 50%;
+  opacity: 0;
+}
+div.injector.active > .drop {
+  animation: drop 0.1s linear;
+  opacity: 1;
+}
+@keyframes press {
+  0% {
+    width: 50px;
+  }
+  100% {
+    width: 40px;
+  }
+}
+
+@keyframes drop {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  100% {
+    bottom: -100px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,54 @@
+.dumpster {
+  align-self: flex-end;
+  height: 191px;
+  width: 200px;
+  position: relative;
+}
+.dumpster img {
+  position: absolute;
+  opacity: 0;
+  right: -100px;
+  animation: jaws 0.3s linear
+}
+.dumpster .biscuit-slead {
+  animation: xAxis 1.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  text-align: left;
+}
+.dumpster .dropping {
+  animation: yAxis 2s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+@keyframes yAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    transform: translateY(100px);
+  }
+}
+
+@keyframes xAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(100px);
+  }
+}
+@keyframes jaws {
+  10% {
+    opacity: 0.1;
+    right: -100px;
+  }
+  30% {
+    opacity: 0.5;
+    right: -40px;
+  }
+  50% {
+    opacity: 1;
+    right: 20px;
+  }
+  70% {
+    opacity: 0.5;
+    right: 20px;
+  }
+  100% {
+    opacity: 0;
+    right: 20px;
+  }
+}

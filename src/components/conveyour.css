@@ -1,0 +1,23 @@
+.conveyour {
+  height: 400px;
+  display: flex;
+}
+table {
+  background-color: gray;
+}
+table tr > td {
+  width: 100px;
+}
+table tr:last-child {
+  height: 50px;
+}
+table tr:last-child td {
+  border: 1px solid black;
+}
+table tr:first-child {
+  height: 200px;
+  vertical-align: bottom;
+}
+.injector-column {
+  vertical-align: top;
+}
