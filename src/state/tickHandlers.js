@@ -31,14 +31,13 @@ export const ovenTickHandler = (state) => {
 };
 
 export const motorTickHandler = (state) => {
-  const previousMotorEnabled = state.motorEnabled;
   const motorEnabled =
     state.controller === POSITIONS.ON && properTemperature(state.temperature);
   return {
     ...state,
     motorEnabled,
     motorPosition:
-      motorEnabled && previousMotorEnabled
+      motorEnabled
         ? moveMotor(state.motorPosition)
         : state.motorPosition,
   };
@@ -85,7 +84,7 @@ export const stamperTickHandler = (state) => {
 };
 
 export const beltTickHandler = (state) => {
-  const shouldMovePosition = state.motorEnabled && state.motorPosition === 10;
+  const shouldMovePosition = state.motorEnabled && state.motorPosition === 10 && state.conveyourItems[0] !== null;
   if (!shouldMovePosition) {
     return state;
   }

@@ -17,7 +17,7 @@ export const initialState = {
   ovenEnabled: false,
   temperature: 0,
   conveyourItems: [],
-  motorPosition: 0,
+  motorPosition: -1,
   injecting: false,
   stamping: false,
 };
@@ -50,7 +50,7 @@ export const reducer = (state, action) => {
         conveyourItems: [],
         ovenEnabled: false,
         motorEnabled: false,
-        motorPosition: 0,
+        motorPosition: -1,
       };
     case actionTypes.REMOVE_LAST_ITEM:
       const conveyourItems = [...state.conveyourItems]
